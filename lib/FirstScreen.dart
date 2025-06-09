@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:state_management/AnimationFlutter.dart';
 import 'package:state_management/ListProvider.dart';
 import 'package:state_management/SecondScreen.dart';
 
@@ -35,7 +36,10 @@ class _FirstScreenState extends State<FirstScreen> {
           ),
           ElevatedButton(onPressed: (){
             Navigator.of(context).push(MaterialPageRoute(builder: (ctx)=>SecondScreen()));
-          }, child: Text("Navigate"))
+          }, child: Text("Navigate")),
+          ElevatedButton(onPressed: (){
+            Navigator.of(context).push(MaterialPageRoute(builder: (ctx)=>AnimationFlutter()));
+          }, child: Text("For animation")),
         ],
       ),
     ));
